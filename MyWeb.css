@@ -1,0 +1,428 @@
+/* استيراد خط جميل من Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&display=swap');
+
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+}
+
+body {
+    background-color: #1b1b1b;
+    color: #ffffff;
+    line-height: 1.6;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #121212;
+}
+
+/* رأس الصفحة */
+header {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+
+
+body.light-mode header, body.light-mode nav ul, body.light-mode section {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+/* قسم About Me */
+#about h2 {
+    color: #3498db; /* نفس اللون المستخدم في قسم الـ Skills */
+}
+
+
+/* شريط التنقل */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    direction: ltr;
+    gap: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #3498db; 
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+body.light-mode nav ul li a {
+    color: #121212;
+}
+
+nav ul li a:hover {
+    color: #ff9800;  /* اللون عند التمرير فوق الرابط */
+}
+
+/* الأقسام */
+section {
+    padding: 50px 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* تأثيرات حديثة */
+.certificates-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certificates-container div {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.certificates-container div:hover {
+    transform: scale(1.05);
+    background: rgba(255, 152, 0, 0.3);
+}
+
+/* زر الوضع الليلي */
+#dark-mode-toggle {
+    background: #ff9800;
+    color: #121212;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+#dark-mode-toggle:hover {
+    background: #e68a00;
+}
+
+#contact {
+    text-align: left;
+    direction:ltr;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+#contact h2 {
+
+    color: #3498db;
+}
+
+#contact ul li {
+    margin: 20px 0;
+    font-size: 1.3em;
+    line-height: 1.8;
+}
+
+#contact a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #16a085;
+}
+
+/* تنسيق زر القائمة المنسدلة */
+.languages-dropdown {
+    position: absolute; /* تغييرها من relative إلى absolute لضبط الموضع بشكل دقيق */
+    top: 0; /* لتحديد الموضع النسبي للأعلى */
+    right: 0; /* لتحديد الموضع بالنسبة لليمين */
+    margin-top: 20px; /* لإضافة مسافة من الأعلى */
+}
+
+.dropdown-btn {
+    padding: 12px 20px;
+    background-color: #4e73df;
+    color: white;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background-color: #2a57d4;
+}
+
+.dropdown-btn i {
+    font-size: 20px;
+}
+
+/* تنسيق محتوى القائمة المنسدلة */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 8px;
+    margin-top: 5px;
+    right: 0; /* لضبط القائمة لتظهر على اليمين مع الزر */
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* إظهار القائمة المنسدلة عند التمرير فوق الزر */
+.languages-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/* تغيير اللون إلى الرمادي الغامق */
+.text-gray-800 {
+    color: #2D3748; /* الرمادي الغامق */
+}
+
+.text-gray-600 {
+    color: #4A5568; /* الرمادي المتوسط */
+}
+
+/* الخلفية البيضاء */
+.bg-white {
+    background-color: white;
+}
+
+
+
+/* CSS */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    text-align: center;
+    transition: background 0.5s ease;
+}
+.light-mode {
+    background-color: #f9f9f9;
+    color: black;
+}
+button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+/* Styling for the skills section */
+.skills-section {
+    background-color: #272a2a;
+    color: #ecf0f1;
+    padding: 50px 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.skills-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 20px;
+}
+
+.skills-description {
+    font-size: 1.2rem;
+    color: #ecf0f1;
+    margin-bottom: 30px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    padding: 0 10px;
+}
+
+.skill-card {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.skill-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #3498db;
+    margin-bottom: 15px;
+}
+
+.skill-card p {
+    font-size: 1rem;
+    color: #bdc3c7;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card:hover h3 {
+    color: #2980b9;
+}
+
+
+
+.certificates-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+.certificates-container div {
+    background: #444;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
+}
+.certificates-container div:hover {
+    transform: scale(1.1);
+}
+
+
+
+
+    /* Styling for the events section */
+    .events-section {
+        background-color: #272a2a;
+        color: #ecf0f1;
+        padding: 40px 20px;
+        border-radius: 10px;
+        margin-top: 30px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .events-section h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        color: #3498db;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .events-section p {
+        text-align: center;
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    .events-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .events-list li {
+        background-color: #34495e;
+        color: #ecf0f1;
+        margin: 10px 0;
+        padding: 15px;
+        border-radius: 8px;
+        font-size: 1rem;
+        display: flex;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .events-list li:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .events-list li i {
+        margin-right: 10px;
+        font-size: 1.5rem;
+    }
+
+
+
+
+
+    .progress-container {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 40px;
+    }
+    
+    .progress-bar {
+        background: #ddd;
+        border-radius: 10px;
+        height: 25px;
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    
+    .progress {
+        background: #2c3e50; /* أزرق رمادي غامق */
+        height: 100%;
+        text-align: center;
+        color: white;
+        border-radius: 10px;
+        font-weight: bold;
+        padding-right: 10px;
+        padding-left: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
